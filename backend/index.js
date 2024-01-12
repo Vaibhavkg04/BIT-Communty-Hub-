@@ -5,6 +5,8 @@ var router = express.Router();
 const cors = require("cors");
 const multer = require("multer");
 const path = require("path");
+const port = process.env.PORT || 3000;
+
 let url =
 	"mongodb+srv://vaibhavkumargupta2004:mrfD73qXcn685Bsi@megacluster.upvlkjb.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(url);
@@ -458,6 +460,9 @@ router.get("/findAll", async function (req, res) {
 	let userAll = await hostelDB.find();
 
 	res.send(userAll);
+});
+router.listen(port, () => {
+	console.log(`Server running on port ${port}`);
 });
 
 module.exports = router;
