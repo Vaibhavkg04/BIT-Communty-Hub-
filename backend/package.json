@@ -3,9 +3,10 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"start": "node ./bin/www",
-		"build": "npm i",
-		"dev": "nodemon index.js"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js",
+		"dev": "nodemon index.js",
+		"build": "npm i"
 	},
 	"dependencies": {
 		"bcrypt": "^5.1.1",
