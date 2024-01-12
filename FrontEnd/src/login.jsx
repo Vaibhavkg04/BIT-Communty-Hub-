@@ -15,7 +15,7 @@ function Login() {
 	const handleLogin = () => {
 		const url = "http://localhost:3000/login";
 		const data = { username, password };
-		alert(username);
+
 		localStorage.setItem("Pname", username);
 
 		axios
