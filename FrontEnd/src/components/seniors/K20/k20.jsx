@@ -20,7 +20,9 @@ function K20() {
 	}
 	const getData = async () => {
 		try {
-			const response = await axios.get("http://localhost:3000/alK20");
+			const response = await axios.get(
+				"https://bit-hub-jvmc.onrender.com/alK20"
+			);
 			const combinedData = response.data.chatMessages.map(
 				(chatMessage, index) => ({
 					chatMessage,

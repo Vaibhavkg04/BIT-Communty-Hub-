@@ -44,7 +44,7 @@ function Alumini() {
 			getData();
 			return;
 		}
-		const url = "http://localhost:3000/senior";
+		const url = "https://bit-hub-jvmc.onrender.com/senior";
 		const data = { Chat, MainUser, id1 };
 		axios
 			.post(url, data)

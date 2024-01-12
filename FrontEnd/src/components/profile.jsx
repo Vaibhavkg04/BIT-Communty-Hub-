@@ -24,7 +24,7 @@ function Profile() {
 		formdata.append("file", file);
 
 		axios
-			.post("http://localhost:3000/upload", formdata, {
+			.post("https://bit-hub-jvmc.onrender.com/upload", formdata, {
 				params: { pname }, // send pname as a query parameter or in the body
 			})
 			.then((res) => setImage(res.data.image))
@@ -32,7 +32,7 @@ function Profile() {
 	};
 	useEffect(() => {
 		axios
-			.get("http://localhost:3000/getImage", {
+			.get("https://bit-hub-jvmc.onrender.com/getImage", {
 				params: { pname },
 			})
 			.then((res) => setImage(res.data.image))

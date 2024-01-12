@@ -9,7 +9,7 @@ function Login_p() {
 	const [password, setPass] = useState("");
 
 	const handleLogin = () => {
-		const url = "http://localhost:3000/login";
+		const url = "https://bit-hub-jvmc.onrender.com/login";
 		const data = { username, password };
 
 		axios
