@@ -22,6 +22,12 @@ function App2() {
 
 		navigate("/Login_p");
 	};
+	function Abt() {
+		navigate("/About");
+	}
+	function team() {
+		navigate("./team");
+	}
 	return (
 		<>
 			<div className="cont2">
@@ -34,8 +40,16 @@ function App2() {
 							<div>
 								<ul className="flex flex-row  gap-8 text-xl">
 									<li className="hover:text-blue-800 cursor-pointer">Home</li>
-									<li className="hover:text-blue-800 cursor-pointer">About</li>
-									<li className="hover:text-blue-800 cursor-pointer">
+									<li
+										onClick={Abt}
+										className="hover:text-blue-800 cursor-pointer"
+									>
+										About
+									</li>
+									<li
+										onClick={team}
+										className="hover:text-blue-800 cursor-pointer"
+									>
 										Contact
 									</li>
 									<li>

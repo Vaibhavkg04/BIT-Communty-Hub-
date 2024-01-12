@@ -14,6 +14,8 @@ import K22 from "./components/seniors/K22/k22.jsx";
 import K21 from "./components/seniors/K21/k21.jsx";
 import K20 from "./components/seniors/K20/k20.jsx";
 import Hostel from "./hostel_stu/hostel.jsx";
+import About from "./about.jsx";
+import Team from "./team.jsx";
 import Login_p from "./components/for_proffessor/Login/login_p.jsx";
 import "./index.css";
 import Hostel_p from "./components/for_proffessor/hostel/hostel_p.jsx";
@@ -106,6 +108,14 @@ const router = createBrowserRouter([
 	{
 		path: "/Hostel_p",
 		element: <Hostel_p />,
+	},
+	{
+		path: "/About",
+		element: <About />,
+	},
+	{
+		path: "/team",
+		element: <Team />,
 	},
 ]);
 
