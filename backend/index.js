@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 var router = express.Router();
+const app = express();
 const cors = require("cors");
 const multer = require("multer");
 const path = require("path");
@@ -461,7 +462,9 @@ router.get("/findAll", async function (req, res) {
 
 	res.send(userAll);
 });
-router.listen(port, () => {
+app.use(router);
+
+app.listen(port, () => {
 	console.log(`Server running on port ${port}`);
 });
 
