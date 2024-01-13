@@ -12,8 +12,6 @@ let url =
 	"mongodb+srv://vaibhavkumargupta2004:mrfD73qXcn685Bsi@megacluster.upvlkjb.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(url);
 
-app.set("view engine", "ejs");
-
 //signin
 const userSchema = mongoose.Schema({
 	username: String,
@@ -93,7 +91,6 @@ router.post("/upload", upload.single("file"), (req, res) => {
 	const { pname } = req.query;
 	Pimage.findOneAndDelete({ userData: pname })
 		.then(() => {
-			// Create a new entry for the uploaded image
 			Pimage.create({ userData: pname, image: req.file.filename })
 				.then((result) => res.json(result))
 				.catch((err) => console.log(err));
