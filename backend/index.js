@@ -12,6 +12,8 @@ let url =
 	"mongodb+srv://vaibhavkumargupta2004:mrfD73qXcn685Bsi@megacluster.upvlkjb.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(url);
 
+app.set("view engine", "ejs");
+
 //signin
 const userSchema = mongoose.Schema({
 	username: String,
