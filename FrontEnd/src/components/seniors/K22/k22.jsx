@@ -19,6 +19,7 @@ function K22() {
 		id1 = "senior";
 	}
 	const getData = async () => {
+		e.preventDefault();
 		try {
 			const response = await axios.get(
 				"https://bit-hub-jvmc.onrender.com/alK22"
@@ -41,6 +42,7 @@ function K22() {
 		}, 1000);
 	});
 	const SendChat = () => {
+		e.preventDefault();
 		if (Chat === "") {
 			alert("cant send empty message");
 			getData();
@@ -83,7 +85,7 @@ function K22() {
 						)}
 				</div>
 				<footer className="down_input ">
-					<form action="">
+					<form onSubmit={SendChat}>
 						<input
 							className=""
 							type="text"
@@ -92,9 +94,7 @@ function K22() {
 							onChange={(e) => setChat(e.target.value)}
 							required
 						/>
-						<button type="submit" onClick={SendChat}>
-							Send
-						</button>
+						<button type="submit">Send</button>
 					</form>
 				</footer>
 				<div className="mb-10">hi</div>
