@@ -10,7 +10,9 @@ function Hostel_p() {
 
 	const fetchData = async () => {
 		try {
-			const response = await axios.get("http://localhost:3000/getImage_h");
+			const response = await axios.get(
+				"https://bit-hub-jvmc.onrender.com/getImage_h"
+			);
 			if (
 				response.data &&
 				response.data.chatMessages &&

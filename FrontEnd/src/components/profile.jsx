@@ -94,7 +94,7 @@ function Profile() {
 					</div>
 					<img
 						className="ml-16 mt-8 mb-4 h-24 w-28"
-						src={"http://localhost:3000/images/" + imgMain}
+						src={"https://bit-hub-jvmc.onrender.com/images/" + imgMain}
 						alt=""
 						width="100"
 						height="100"

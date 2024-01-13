@@ -20,7 +20,7 @@ function Alumini() {
 	}
 	const getData = async () => {
 		try {
-			const response = await axios.get("http://localhost:3000/al");
+			const response = await axios.get("https://bit-hub-jvmc.onrender.com/al");
 			const combinedData = response.data.chatMessages.map(
 				(chatMessage, index) => ({
 					chatMessage,

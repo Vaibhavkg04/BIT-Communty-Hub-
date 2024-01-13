@@ -42,7 +42,7 @@ function Hostel() {
 
 		try {
 			const response = await axios.post(
-				"http://localhost:3000/upload_h",
+				"https://bit-hub-jvmc.onrender.com/upload_h",
 				formdata,
 				{
 					params: { pname_h: pname, chat_h: chat_h, tf: Jaldi_batao },
