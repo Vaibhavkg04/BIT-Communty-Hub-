@@ -18,6 +18,7 @@ const userSchema = mongoose.Schema({
 	username: String,
 	password: String,
 });
+
 const User = mongoose.model("User", userSchema);
 router.use(bodyParser.json());
 router.use(cors());
@@ -92,7 +93,6 @@ router.post("/upload", upload.single("file"), (req, res) => {
 	const { pname } = req.query;
 	Pimage.findOneAndDelete({ userData: pname })
 		.then(() => {
-			// Create a new entry for the uploaded image
 			Pimage.create({ userData: pname, image: req.file.filename })
 				.then((result) => res.json(result))
 				.catch((err) => console.log(err));

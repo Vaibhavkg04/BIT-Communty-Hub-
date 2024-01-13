@@ -46,7 +46,7 @@ function K21() {
 			getData();
 			return;
 		}
-		const url = "http://localhost:3000/seniorK21";
+		const url = "https://bit-hub-jvmc.onrender.com/seniorK21";
 		const data = { Chat, MainUser, id1 };
 		axios
 			.post(url, data)

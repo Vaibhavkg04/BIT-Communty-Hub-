@@ -27,7 +27,7 @@ function Pro_cs() {
 
 	const getData = async () => {
 		try {
-			const response = await axios.get("http://localhost:3000/cs");
+			const response = await axios.get("https://bit-hub-jvmc.onrender.com/cs");
 			// alert(response.data.id2);
 
 			const combinedData = response.data.chatMessages.map(
